@@ -1,2 +1,6 @@
+1.0.1:  Fri Aug 18 16:21:57 EDT 2006
+   - I've been told by two respectable coders that my standard old GPL+comments license is silly.
+     It is.  I'm switching to the LGPL.  :(
+
 1.0.0:  Fri Aug 18 16:21:57 EDT 2006
    - I got this working

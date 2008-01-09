@@ -6,4 +6,5 @@ MANIFEST
 t/05_test.t
 Changes
 README
+lgpl-2.1.txt.gz
 META.yml                                 Module meta-data (added by MakeMaker)
