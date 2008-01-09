@@ -1,0 +1,9 @@
+FindBlessedRefs.pm
+FindBlessedRefs.xs
+Makefile.PL
+t/01_load.t
+MANIFEST
+t/05_test.t
+Changes
+README
+META.yml                                 Module meta-data (added by MakeMaker)
