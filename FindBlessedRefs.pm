@@ -10,7 +10,7 @@ use base 'Exporter';
 
 our %EXPORT_TAGS = ( all => [qw( find_refs )]);
 our @EXPORT_OK   = ( @{$EXPORT_TAGS{all}} );
-our $VERSION     = '1.0.1';
+our $VERSION     = '1.0.2';
 
 require XSLoader;
 XSLoader::load('Devel::FindBlessedRefs', $VERSION);
