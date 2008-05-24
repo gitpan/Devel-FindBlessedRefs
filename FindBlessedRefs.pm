@@ -10,7 +10,9 @@ use base 'Exporter';
 
 our %EXPORT_TAGS = ( all => [qw( find_refs )]);
 our @EXPORT_OK   = ( @{$EXPORT_TAGS{all}} );
-our $VERSION     = '1.0.2';
+
+use version;
+our $VERSION = version->new('1.0.2')->numify;
 
 require XSLoader;
 XSLoader::load('Devel::FindBlessedRefs', $VERSION);
