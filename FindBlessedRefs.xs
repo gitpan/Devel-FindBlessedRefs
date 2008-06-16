@@ -23,9 +23,8 @@ find_refs(package)
 
                 // this part isn't from sv.c
                 // int sv_isa(SV* sv, const char* name)
-                if( sv_isa(sv, package) ) {
+                if( sv_isa(sv, package) )
                     XPUSHs(sv);
-                }
             }
         }
     }

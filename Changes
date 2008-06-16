@@ -1,3 +1,8 @@
+1.0.5: Mon Jun 16 17:58:45 EDT 2008
+   - I brainstormed that I can eliminated the qv() problems on
+     some platforms by interpolating the $VERSION... probably
+     won't work.  Worth a shot.
+
 1.0.4: Tue May 27 12:12:28 EDT 2008
    - (wow, use version has to be on the same line as our $VERSION
       for older EUMM)
