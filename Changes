@@ -1,3 +1,13 @@
+1.0.6: Mon Jun 16 19:56:37 EDT 2008
+   - That was a stupid idea and I can't believe I posted it to
+     CPAN.  After I thought about it more, the error: "object
+     version undef does not match bootstrap parameter" --
+     indicates that the .so has "undef" as the version string,
+     not the other way around.  So the MakeMaker is screwing this
+     up, not the XSLoader.
+   - Hehe, rigged.  I set the 01_load.t to spew interesting
+     details from the Makefile on failure.
+
 1.0.5: Mon Jun 16 17:58:45 EDT 2008
    - I brainstormed that I can eliminated the qv() problems on
      some platforms by interpolating the $VERSION... probably
