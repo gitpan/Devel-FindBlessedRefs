@@ -4,6 +4,8 @@
 
 MODULE = Devel::FindBlessedRefs PACKAGE = Devel::FindBlessedRefs
 
+PROTOTYPES: DISABLE
+
 void
 find_refs(package)
     char *package
@@ -25,6 +27,45 @@ find_refs(package)
                 // int sv_isa(SV* sv, const char* name)
                 if( sv_isa(sv, package) )
                     XPUSHs(sv);
+            }
+        }
+    }
+
+void
+find_refs_by_coderef(code_ref)
+    SV* code_ref;
+
+    PREINIT:
+    SV* sva;
+    SV* svend;
+    SV* sv;
+    svtype t;
+    U32 c;
+
+	CODE:
+    for (sva = PL_sv_arenaroot; sva; sva = (SV*)SvANY(sva)) {
+        svend = &sva[SvREFCNT(sva)];
+
+        for (sv = sva + 1; sv < svend; ++sv) {
+            if ((t = SvTYPE(sv)) != SVTYPEMASK && (c =SvREFCNT(sv))) {
+                switch(t) {
+                    case SVt_NULL:
+                    case SVt_IV:
+                    case SVt_NV:
+                    case SVt_RV:
+                    case SVt_PV:
+
+                    {
+                        dSP; // make a new local stack
+
+                        PUSHMARK(SP); // start pushing
+                        XPUSHs(sv); // push the sv as a mortal
+                        PUTBACK; // end the stack
+
+                        call_sv(code_ref, G_DISCARD);
+                    }
+
+                }
             }
         }
     }

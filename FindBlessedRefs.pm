@@ -8,10 +8,10 @@ require Exporter;
 use AutoLoader;
 use base 'Exporter';
 
-our %EXPORT_TAGS = ( all => [qw( find_refs )]);
+our %EXPORT_TAGS = ( all => [qw( find_refs find_refs_by_coderef )]);
 our @EXPORT_OK   = ( @{$EXPORT_TAGS{all}} );
 
-use version; our $VERSION = qv('1.0.6');
+use version; our $VERSION = qv('1.1.0');
 
 require XSLoader;
 XSLoader::load('Devel::FindBlessedRefs', $VERSION);
@@ -26,10 +26,23 @@ Devel::FindBlessedRefs - find all refs blessed under a package
 
 =head1 SYNOPSIS
 
-    use Devel::FindBlessedRefs qw(find_refs);
+    use Devel::FindBlessedRefs qw(:all);
 
     my @refs = find_refs("PackageName");
     # this is somewhat inefficient and is rprobably only useful for testing
+
+If you're so inclined, you could also search this way:
+
+    use Scalar::Util qw(blessed);
+
+    my @refs;
+    find_refs_by_coderef(sub {
+        my $sv = shift;
+
+        if( ref($sv) and blessed($sv) ) {
+            push @refs, $sv if $sv->isa("PackageName");
+        }
+    });
 
 =head1 AUTHOR
 
