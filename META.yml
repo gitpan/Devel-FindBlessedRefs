@@ -1,14 +1,19 @@
---- #YAML:1.0
-name:                Devel-FindBlessedRefs
-version:             1.1.0
-abstract:            ~
-license:             ~
-author:              
-    - Paul Miller <jettero@cpan.org>
-generated_by:        ExtUtils::MakeMaker version 6.44
-distribution_type:   module
-requires:     
-    version:                       0
+---
+name: Devel-FindBlessedRefs
+version: 1.1.1
+author:
+  - 'Paul Miller <paul@cpan.org>'
+abstract: find all refs blessed under a package
+license: lgpl
+resources:
+  license: http://opensource.org/licenses/artistic-license.php
+requires:
+  version: 0
+provides:
+  Devel::FindBlessedRefs:
+    file: FindBlessedRefs.pm
+    version: 1.1.1
+generated_by: Module::Build version 0.2808
 meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
-    version: 1.3
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

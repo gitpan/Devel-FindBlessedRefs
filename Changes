@@ -1,3 +1,7 @@
+1.1.1: Tue Jul 22 07:06:54 EDT 2008
+   - moving to Build.PL so version.pm will work correctly with
+     XS.  Sad.
+
 1.1.0: Fri Jul 18 07:29:44 EDT 2008
    - added a by_coderef version of find_refs
 
