@@ -7,6 +7,9 @@ my $build = Module::Build->new(
      pm_files         => { 'FindBlessedRefs.pm'  => 'lib/Devel/FindBlessedRefs.pm'  },
     pod_files         => { 'FindBlessedRefs.pod' => 'lib/Devel/FindBlessedRefs.pod' },
      xs_files         => { 'FindBlessedRefs.xs'  => 'lib/Devel/FindBlessedRefs.xs'  },
+    build_requires    => {
+        'ExtUtils::CBuilder' => 0, 
+    },
     requires          => {
         'version' => '0',
     },
