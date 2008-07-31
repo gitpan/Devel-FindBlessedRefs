@@ -1,6 +1,5 @@
 FindBlessedRefs.pm
 FindBlessedRefs.xs
-Makefile.PL
 t/01_load.t
 MANIFEST
 t/05_test.t
