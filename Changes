@@ -1,3 +1,6 @@
+1.2: Thu Aug  7 16:13:58 EDT 2008
+   - removed version.pm and Module::Build
+
 1.1.3: Wed Jul 30 07:26:31 EDT 2008
    - just noticed my email address was wrong in the pod
    - removed the Makefile.PL, it causes problems

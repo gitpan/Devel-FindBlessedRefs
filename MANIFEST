@@ -7,6 +7,6 @@ Changes
 README
 lgpl-2.1.txt.gz
 t/07_test_codref.t
-Build.PL
+Makefile.PL
 FindBlessedRefs.pod
 META.yml
