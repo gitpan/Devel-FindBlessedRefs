@@ -1,3 +1,7 @@
+1.25: Wed Sep 10 07:01:39 EDT 2008
+   - woops: http://perlmonks.org/index.pl?node_id=709036 --
+     applies to this code also
+
 1.2: Thu Aug  7 16:13:58 EDT 2008
    - removed version.pm and Module::Build
 
