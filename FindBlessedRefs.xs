@@ -21,7 +21,7 @@ find_refs(package)
         svend = &sva[SvREFCNT(sva)];
 
         for (sv = sva + 1; sv < svend; ++sv) {
-            if (SvTYPE(sv) != SVTYPEMASK && SvREFCNT(sv)) {
+            if ( SvROK(sv) ) {
 
                 // this part isn't from sv.c
                 // int sv_isa(SV* sv, const char* name)

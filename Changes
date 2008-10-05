@@ -1,3 +1,6 @@
+1.251: Sun Oct  5 09:38:38 EDT 2008
+   - removed the other SvTYPE() since it's probably also wrong
+
 1.25: Wed Sep 10 07:01:39 EDT 2008
    - woops: http://perlmonks.org/index.pl?node_id=709036 --
      applies to this code also
