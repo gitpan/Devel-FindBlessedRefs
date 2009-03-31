@@ -5,8 +5,7 @@ MANIFEST
 t/05_test.t
 Changes
 README
-lgpl-2.1.txt.gz
 t/07_test_codref.t
 Makefile.PL
 FindBlessedRefs.pod
-META.yml
+META.yml                                 Module meta-data (added by MakeMaker)
