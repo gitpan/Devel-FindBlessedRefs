@@ -32,7 +32,7 @@ find_refs(package)
     }
 
 void
-find_refs_by_coderef(code_ref)
+find_refs_with_coderef(code_ref)
     SV* code_ref;
 
     PREINIT:
